@@ -41,7 +41,7 @@ namespace CreditSio.DataAccess
             string connectionString;
             try
             {
-                connectionString = ConfigurationManager.ConnectionStrings["sqlserver_creditsio"].ConnectionString;
+                connectionString = ConfigurationManager.ConnectionStrings["gestion_materiel"].ConnectionString;
                 sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
 
