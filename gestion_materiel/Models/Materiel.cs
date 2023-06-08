@@ -14,6 +14,4 @@ namespace gestion_materiel.Models
         protected int Id { get => id; set => id = value; }
         protected string Marque { get => marque; set => marque = value; }
     }
-
-
 }

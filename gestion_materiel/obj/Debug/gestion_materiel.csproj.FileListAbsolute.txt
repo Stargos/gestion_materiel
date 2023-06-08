@@ -1,0 +1,11 @@
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.csproj.AssemblyReference.cache
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.Forms.Accueil.resources
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.Forms.FLogin.resources
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.Properties.Resources.resources
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.csproj.GenerateResource.cache
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.csproj.CoreCompileInputs.cache
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\bin\Debug\gestion_materiel.exe.config
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\bin\Debug\gestion_materiel.exe
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\bin\Debug\gestion_materiel.pdb
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.exe
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.pdb
