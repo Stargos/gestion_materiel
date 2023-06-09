@@ -24,7 +24,7 @@ namespace gestion_materiel.Forms
         {
             string nomMateriel = comboBox1.Text;
             string idMateriel = textBox2.Text;
-            connection = new SqlConnection("Votre chaîne de connexion");
+            connection = new SqlConnection("gestion_materiel");
 
 
             string tableNom = "";

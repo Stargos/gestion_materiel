@@ -31,6 +31,8 @@ namespace gestion_materiel.Forms
             string type = txtType.Text;
             string taille = txtTaille.Text;
             string saison = txtSaison.Text;
+            connection = new SqlConnection("gestion_materiel");
+
 
             string tableNom = "";
             string champSupp1 = "";
@@ -95,6 +97,11 @@ namespace gestion_materiel.Forms
             {
                 connection.Close();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
