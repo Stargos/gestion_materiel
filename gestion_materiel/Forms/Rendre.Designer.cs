@@ -33,8 +33,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,9 +67,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(41, 392);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Quantité :";
+            this.label3.Text = "ID :";
             // 
             // label2
             // 
@@ -80,33 +80,38 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Matériel :";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(97, 355);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 14;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(41, 324);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 13);
+            this.label1.Size = new System.Drawing.Size(281, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Indiquez le matériel et la quantité que vous voulez ajouter :";
+            this.label1.Text = "Indiquez le matériel et la quantité que vous voulez rendre :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "palme",
+            "combinaison"});
+            this.comboBox1.Location = new System.Drawing.Point(97, 355);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(99, 21);
+            this.comboBox1.TabIndex = 28;
+            this.comboBox1.Text = "palme";
             // 
             // Rendre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(703, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Rendre";
             this.Text = "Rendre";
@@ -123,7 +128,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

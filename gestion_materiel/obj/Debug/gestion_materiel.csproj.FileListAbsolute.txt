@@ -9,3 +9,6 @@ C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\bin\Debug\ges
 C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\bin\Debug\gestion_materiel.pdb
 C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.exe
 C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.pdb
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.Forms.Ajouter.resources
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.Forms.Prêter.resources
+C:\Users\milanberrettoni\Desktop\GestionMatériel\gestion_materiel\obj\Debug\gestion_materiel.Forms.Rendre.resources
