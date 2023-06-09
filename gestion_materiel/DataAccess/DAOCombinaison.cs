@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CreditSio.Models;
+using gestion_materiel.Models;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using CreditSio.Tools;
+using gestion_materiel.Tools;
 
 namespace gestion_materiel.DataAccess
 {

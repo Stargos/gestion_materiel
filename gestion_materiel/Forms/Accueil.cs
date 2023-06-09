@@ -21,5 +21,26 @@ namespace gestion_materiel.Forms
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ajouter ajouter = new Ajouter();
+            ajouter.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Prêter preter = new Prêter();
+            preter.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Rendre rendre = new Rendre();
+            rendre.Show();
+            this.Hide();
+        }
     }
 }

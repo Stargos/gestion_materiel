@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreditSio.Tools
+namespace gestion_materiel.Tools
 {
     /// <summary>
     /// Auteur : M. Berrettoni.

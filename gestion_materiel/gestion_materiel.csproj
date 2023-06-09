@@ -66,6 +66,24 @@
     <Compile Include="Forms\Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ajouter.Designer.cs">
+      <DependentUpon>Ajouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Prêter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Prêter.Designer.cs">
+      <DependentUpon>Prêter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rendre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rendre.Designer.cs">
+      <DependentUpon>Rendre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Nageur.cs" />
     <Compile Include="Models\Pret.cs" />
     <Compile Include="Models\Combinaison.cs" />
@@ -77,8 +95,17 @@
     <EmbeddedResource Include="Forms\Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ajouter.resx">
+      <DependentUpon>Ajouter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Prêter.resx">
+      <DependentUpon>Prêter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rendre.resx">
+      <DependentUpon>Rendre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
