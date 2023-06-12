@@ -13,11 +13,11 @@
 # - Lyon Palme - 
 ## ***Application : gestion et prêt du matériel.***
   
-Projet personnel encadré réalisé par **BOURAGHDA Yasser, HANON Nicolas**,  
-étudiant en 2e année de **BTS Services informatiques aux organisations Option SLAM**.  
+Projet personnel encadré réalisé par **PERRAT Tom et BERRETTONI MILAN**,
+étudiants en 2e année de **BTS Services Informatiques aux Organisations Option SLAM**.  
 
 Professeur : Mme CHATAING  
-Sup'Chassagnes - Oullins (69)  
+Sup'Chassagnes - 69600, Oullins  
  
 ---
 
@@ -27,7 +27,7 @@ Sup'Chassagnes - Oullins (69)
   1.2. [Technologies et savoir-faire mis en oeuvre](#12-technologies-et-savoir-faire-mis-en-oeuvre)  
 2. [Utiliser l'application](#2-utiliser-lapplication)  
   2.1. [Environnement logiciel requis](#21-environnement-logiciel-requis)  
-  2.2. [Compte SSMS pour ce connecter a la base de données](#22-Compte-SSMS-pour-ce-connecter-a-la-base-de-données)  
+  2.2. [Compte SSMS pour se connecter à la base de données](#22-Compte-SSMS-pour-ce-connecter-a-la-base-de-données)  
   2.3. [Configuration de l'application pour la connexion à la base de données](#23-Configuration-de-l'application-pour-la-connexion-à-la-base-de-données)
   2.3.1 [Chaînes de connexion](#231-Chaînes-de-connexion)    
   2.4. [Authentification dans l'application (formulaire de connexion)](#24-authentification-dans-lapplication-formulaire-de-connexion)   
@@ -35,8 +35,8 @@ Sup'Chassagnes - Oullins (69)
 3. [Annexes](#3-annexes)  
   3.1. [Usercase](#31-Usercase)  
   3.2. [Modèle conceptuel de données](#32-Modèle-conceptuel-de-données)  
-  3.3. [Diagramme de classes](#33-diagramme-de-classes)
-  3.4. [Diagramme de sequence](#34-diagramme-de-sequence)  
+  3.3. [Diagramme de classe](#33-diagramme-de-classes)
+  3.4. [Diagramme de séquence](#34-diagramme-de-sequence)  
 4. [Remerciements](#4-remerciements)  
 
 ---
@@ -46,27 +46,26 @@ Sup'Chassagnes - Oullins (69)
 Une application permettant de gérer le matériel du club doit être développée par les personnes du backoffice.
 Elle est utilisée par le(s) responsable(s) matériel. Cette application permet d’entrer du matériel en
 stock, de faire sortir du matériel du stock, de prêter du matériel à des adhérents.
-Elle permet également de « tracer » le matériel c’est-à-dire pour un matériel, connaitre toutes les
-personnes à qui il a été prêté. Ceci permet de retrouver la personne responsable en cas de détérioration
+Elle permet également de « tracer » le matériel c’est-à-dire que, pour un matériel, il faut connaître toutes les
+personnes à qui il a été prêté. Cela permettra ainsi de retrouver la personne responsable en cas de détérioration
 du matériel.    
 
 ### 1.2. Technologies et savoir-faire mis en oeuvre
 + Langage orienté objet : C#
   + WINDOWS FORMS
-    + Flat Design
-  + Data Acess
+  + Data Access
   + Forms
     + Dao
       + Mappage 
     + Fonction
   + MODELS
-   + Class Mere
-   + Class 
-+ DONNES 
+   + Classe Mère
+   + Classe 
++ DONNÉES 
   + Base de données relationnelles : SSMS
-    + Heritage
-    + Liens 1 a * 
-    + Procedure stocké 
+    + Héritage
+    + Liens 1 à * 
+    + Procédure stockée 
     + Vue
     + Certificat
     + Chiffrement des données
@@ -87,13 +86,13 @@ Informations sur les versions utilisées lors du développement de l'application
 + Visual Studio 2022
 + Visual Studio 2019  
 
-### 2.2. Compte SSMS pour ce connecter a la base de données
-Les logins que nous avons crée qui respectent le CRUD :
+### 2.2. Compte SSMS pour se connecter à la base de données
+Les logins que nous avons créés et qui respectent le CRUD :
 
-    USER : yasserbouraghda
-    PASSWORD : Lion42500! 
+    USER : Tom
+    PASSWORD : AZjdeon.7ed9==
       
-Il faudra alors modifier le fichier `app.config` du projet Gestion materiel. Cf. point 2.3.*  
+Il faudra alors modifier le fichier `app.config` du projet Gestion matériel. Cf. point 2.3.*  
 
 ### 2.3. Configuration de l'application pour la connexion à la base de données
 
@@ -113,72 +112,70 @@ puis de **modifier les valeurs associées aux clés `sourceDonnees` et `procedur
     </appSettings>
 
 #### 2.3.1. Chaînes de connexion
-Assurez-vous enfin de personnaliser la **chaîne de connexion** (`sqlserver_creditsio` pour SQL Server) afin de correspondre aux identifiants et caractéristiques de votre base de données.  
+Assurez-vous enfin de personnaliser la **chaîne de connexion** (`gestion_materiel` pour SQL Server) afin de correspondre aux identifiants et caractéristiques de votre base de données.
 
 Ces chaînes se trouvent dans la section `connectionStrings` du même fichier `app.config`.
 
 ```csharp
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-    <configSections>    </configSections>
-    <connectionStrings>
-        <add name="sqlserver_creditsio" connectionString="Data Source=192.168.100.236;Initial Catalog=yasserbouraghda;User ID=yasserbouraghda;Password=Lion42500!"   providerName="System.Data.SqlClient" />
-        <add name="CreditSio.Properties.Settings.yasserbouraghdaConnectionString"   connectionString="Data Source=192.168.100.236;Initial Catalog=yasserbouraghda;Persist Security Info=True;User ID=yasserbouraghda;Password=Lion42500!"   providerName="System.Data.SqlClient" />
-    </connectionStrings>
     <startup>
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
     </startup>
-</configuration>
+    <connectionStrings>
+        <add name="gestion_materiel" connectionString="Data Source=192.168.100.236;Initial Catalog=tomperrat;User ID=LPTom;Password=Ep^biYpxD6" providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    
 ```
 
   
 
 ### 2.4. Authentification dans l'application (formulaire de connexion)  
-Le(s) responsable(s) du matériel ce connecte a l'application en fournissant l'username et le mot de passe préalablement crée qu'il rentre pour accéder a l'application.
+Le(s) responsable(s) du matériel se connecte(nt) à l'application en fournissant l'username et le mot de passe préalablement créés afin qu'il(s) puisse(nt) rentrer pour accéder à l'application.
 | Identifiant        | Mot de passe      |
 |--------------------|-------------------|
-| GestMat            | C1Secret!         |
+| Tom                | 1234              |
 
      
 ### 2.5. Navigation entre les formulaires
 #### 2.5.1. Formulaire de connexion
-La première interface visible par l'utilisateur est le formulaire de connexion, qui demande au responsable du matériel de saisir ses identifiant et mot de passe et les vérifie auprès de la base de données.  
+La première interface visible par l'utilisateur est le formulaire de connexion, qui demande au responsable du matériel de saisir son identifiant et son mot de passe pour les vérifier auprès de la base de données.  
 + En cas d'identifiants erronés, le formulaire en informe l'utilisateur, qui peut les saisir de nouveau ou bien quitter l'application.
-+ *ATTENTION* dans le cas où le serveur de base de données est inaccessible, la connexion sera toujours possible, mais ca n'affichera aucun éléments dans les différents formulaire de notre application, étant donné que le compte est gérer dans C#. 
++ *ATTENTION* dans le cas où le serveur de base de données est inaccessible, la connexion sera toujours possible, mais cela n'affichera aucun élément dans les différents formulaires de notre application, étant donné que le compte est géré dans C#. 
 
 #### 2.5.2. Formulaire Accueil
 Une fois l'authentification réussie, l'utilisateur est amené au formulaire principal de l'application.    
-L'interface Accueil est composé en deux partie
-| Premiere partie    | Second Partie     |
+L'interface Accueil est composé en deux parties
+| Première partie    | Seconde Partie    |
 |--------------------|-------------------|
 | Navbar             | formulaire stock  |
 
-+ Premiere partie
-  + une navbar composé de différents élément, le premier est le fait d'afficher l'username de la personne connectés
-  + la seconde utilité de cet navbar est de pouvoir accéder au deuxieme windows forms *Voir pret* 
-  + nous avons également deux boutton qui permettent l'ajouts d'une combinaison ou d'une monopalme
-  + nous avons également un bouton refresh qui permet de mettre a jour les données
++ Première partie
+  + Une navbar composée de différents éléments, le premier est le fait d'afficher l'username de la personne connectée.
+  + La seconde utilité de cette navbar est de pouvoir accéder au deuxième windows forms *Voir prêt*.
+  + Nous avons également deux boutons qui permettent l'ajout d'une combinaison ou d'une monopalme.
+  + Un bouton refresh qui permet de mettre à jour les données est aussi présent.
 
 
 + Seconde Partie
-  + Un formulaire qui permet l'affichage de stock.
-  + Nous pouvons voir que ce tableau est la representation de notre table Stock avec ID, Nom, Marque, Taille, Saison, TypeMono, Pointure.
+  + Un formulaire qui permet l'affichage du stock.
+  + Nous pouvons voir que ce tableau est la représentation de notre table Stock avec id, marque, Taille, Saison, Pointure, Type.
 
-#### 2.5.3. Formulaire Voir Pret
-Cet page permet de lister tout les prets.
-+ La premiere fonctionnalité et de pouvoir recuperer le pret
-+ Nous pouvons ajouter un pret
-+ Nous pouvons voir les nageurs pour voir a quel ID ces derniers appartiennent
-+ Un boutton refresh
+#### 2.5.3. Formulaire Voir Prêt
+Cette page permet de lister tout les prêts.
++ La première fonctionnalité et de pouvoir récupérer le prêt.
++ Nous pouvons ajouter un prêt.
++ Nous pouvons voir les nageurs afin de déterminer à quel ID ces derniers appartiennent.
++ Un bouton refresh.
 
-#### 2.5.4. Executable
+#### 2.5.4. Exécutable
 
-Pour faire l'exécutable il y a quelque petites étapes a respecter, en éffet les voici !
-| Appuyer sur generer suivi de publier gestion matériel | Appuyer sur terminer | Appuyer sur setup.exe |  
+Pour faire l'exécutable il y a quelques petites étapes à respecter :
+| Appuyez sur "Générer" puis sur "Publier gestion matériel" | Appuyez sur terminer | Appuyez sur setup.exe |  
 |---|---|---|
-| ![generer](dossier_technique/executable1.png) | ![terminer](dossier_technique/executable2.png) | ![setup](dossier_technique/executable3.png) |  
+| ![générer](dossier_technique/executable1.png) | ![terminer](dossier_technique/executable2.png) | ![setup](dossier_technique/executable3.png) |  
 
-est enfin appuyer sur installer, apres toutes ces etapes nous pourrons accéder a notre application.
+Et enfin appuyez sur "Installer", après toutes ces étapes nous pourrons accéder à notre application.
 
 ---
 ## 3. Annexes  
@@ -191,17 +188,14 @@ est enfin appuyer sur installer, apres toutes ces etapes nous pourrons accéder 
 ### 3.3. Diagramme de classes
 ![Diagramme_de_classes](dossier_technique/UML.png) 
 
-### 3.4. Diagramme de sequence
+### 3.4. Diagramme de séquence
 ![Diagramme de sequence](dossier_technique/sequence.png)
 
 ---
 
 ## 4. Remerciements 
-Nous tenons a remercier notre professeur pour ces precieux enseignements.  
+Nous tenons à remercier notre professeure Madame Chataing pour ses précieux enseignements fournis tout au long de nos années d'études.
 
-Voici les différentes sources que nous avons pu utiliser.     
-+ **CodeCraks** Qui ma permit d'apprendre le Flat Design [CodeCraks](https://www.youtube.com/@CodeCraks)
-  + [Créer une application C# de A à Z](https://www.youtube.com/watch?v=HalXZUHfKLA&list=PLLWMQd6PeGY3t63w-8MMIjIyYS7MsFcCi) (cours complet, plusieurs vidéos)  
-  + [Les procédures stockées SQL](https://www.youtube.com/watch?v=Sggdhot-MoM)
-
-+ A CHATGPT **[CHATGPT](https://chat.openai.com/)**
+Voici les différentes sources que nous avons pu utiliser.
+  + [Documentation Microsoft SQL](https://learn.microsoft.com/en-us/sql/t-sql/language-reference?view=sql-server-ver16)
+  + [Documentation C#](https://learn.microsoft.com/fr-fr/dotnet/csharp/)
